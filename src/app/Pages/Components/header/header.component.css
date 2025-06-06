@@ -1,0 +1,20 @@
+/* Para los enlaces del menú de escritorio */
+nav a[class*="px-4 py-2"], 
+nav a[class*="flex items-center py-3 px-4"] {
+  cursor: pointer;
+}
+
+/* Para los iconos de redes sociales */
+nav a[class*="text-[#9f151c]"] {
+  cursor: pointer;
+}
+
+/* Para el logo/título */
+a[class*="flex items-center space-x-3 group"] {
+  cursor: pointer;
+}
+
+/* Para el botón del menú móvil */
+button[class*="lg:hidden p-2"] {
+  cursor: pointer;
+}

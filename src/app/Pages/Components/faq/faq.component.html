@@ -1,0 +1,180 @@
+<section id="FAQ" class="relative overflow-hidden bg-gradient-to-b from-gray-50 to-white py-20 md:py-28 lg:py-32">
+  <!-- Fondo decorativo -->
+  <div class="absolute inset-0 z-0 opacity-10">
+    <div class="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2IiBoZWlnaHQ9IjYiPjxyZWN0IHdpZHRoPSI2IiBoZWlnaHQ9IjYiIGZpbGw9IiNmZmYiLz48cGF0aCBkPSJNMCAwTDEgMU0yIDBMNSAzTTAgMkwyIDVNNSAxTDEgNSIgc3Ryb2tlPSJyZ2JhKDE4NiwyNywyNywwLjA1KSIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9zdmc+')]"></div>
+  </div>
+  
+  <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Encabezado -->
+    <div class="text-center mb-16">
+      <div class="inline-flex items-center px-4 py-2 rounded-full bg-white border border-gray-200 shadow-sm mb-6">
+        <span class="w-2 h-2 rounded-full bg-[#ba1b1b] mr-2 animate-pulse"></span>
+        <span class="text-sm font-medium text-gray-700">¿Tienes dudas?</span>
+      </div>
+      <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+        Preguntas <span class="text-[#ba1b1b]">Frecuentes</span>
+      </h2>
+      <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+        Resolvemos tus inquietudes sobre nuestros servicios de diseño e impresión.
+      </p>
+    </div>
+
+    <!-- Acordeón de preguntas -->
+    <div class="max-w-4xl mx-auto space-y-4">
+      <!-- Pregunta 1 -->
+      <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden transition-all duration-300 hover:shadow-md">
+        <button 
+          (click)="toggle(0)" 
+          class="w-full flex justify-between items-center p-6 md:p-8 text-left focus:outline-none"
+        >
+          <h3 class="text-lg md:text-xl font-semibold text-gray-900">
+            ¿Qué incluye una propuesta creativa?
+          </h3>
+          <svg 
+            class="w-6 h-6 text-[#ba1b1b] transform transition-transform duration-300" 
+            [ngClass]="{'rotate-180': openStates[0]}" 
+            fill="none" 
+            stroke="currentColor" 
+            viewBox="0 0 24 24"
+          >
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </button>
+        
+        <div 
+          *ngIf="openStates[0]" 
+          class="px-6 md:px-8 pb-6 md:pb-8 pt-0 text-gray-600"
+        >
+          <p class="mb-4">
+            Nuestras propuestas creativas incluyen un análisis detallado de tus necesidades, investigación de mercado, 
+            conceptos iniciales (3 opciones de diseño), revisiones ilimitadas, y los archivos finales en todos los 
+            formatos necesarios para impresión y digital.
+          </p>
+          <p>
+            También incluye una guía de marca con recomendaciones de uso, colores corporativos y tipografías.
+          </p>
+        </div>
+      </div>
+
+      <!-- Pregunta 2 -->
+      <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden transition-all duration-300 hover:shadow-md">
+        <button 
+          (click)="toggle(1)" 
+          class="w-full flex justify-between items-center p-6 md:p-8 text-left focus:outline-none"
+        >
+          <h3 class="text-lg md:text-xl font-semibold text-gray-900">
+            ¿En cuánto tiempo entregan un diseño?
+          </h3>
+          <svg 
+            class="w-6 h-6 text-[#ba1b1b] transform transition-transform duration-300" 
+            [ngClass]="{'rotate-180': openStates[1]}" 
+            fill="none" 
+            stroke="currentColor" 
+            viewBox="0 0 24 24"
+          >
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </button>
+        
+        <div 
+          *ngIf="openStates[1]" 
+          class="px-6 md:px-8 pb-6 md:pb-8 pt-0 text-gray-600"
+        >
+          <p class="mb-4">
+            Los tiempos varían según la complejidad del proyecto:
+          </p>
+          <ul class="list-disc pl-5 space-y-2">
+            <li><strong>Logotipos:</strong> 5-7 días hábiles para los primeros conceptos</li>
+            <li><strong>Diseño gráfico:</strong> 3-5 días hábiles por pieza</li>
+            <li><strong>Material impreso:</strong> 2-3 días hábiles después de aprobación final</li>
+          </ul>
+          <p class="mt-4">
+            Trabajamos con entregas escalonadas para que puedas revisar y aprobar cada fase.
+          </p>
+        </div>
+      </div>
+
+      <!-- Pregunta 3 -->
+      <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden transition-all duration-300 hover:shadow-md">
+        <button 
+          (click)="toggle(2)" 
+          class="w-full flex justify-between items-center p-6 md:p-8 text-left focus:outline-none"
+        >
+          <h3 class="text-lg md:text-xl font-semibold text-gray-900">
+            ¿Pueden manejar campañas mensuales?
+          </h3>
+          <svg 
+            class="w-6 h-6 text-[#ba1b1b] transform transition-transform duration-300" 
+            [ngClass]="{'rotate-180': openStates[2]}" 
+            fill="none" 
+            stroke="currentColor" 
+            viewBox="0 0 24 24"
+          >
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </button>
+        
+        <div 
+          *ngIf="openStates[2]" 
+          class="px-6 md:px-8 pb-6 md:pb-8 pt-0 text-gray-600"
+        >
+          <p class="mb-4">
+            ¡Absolutamente! Tenemos paquetes especiales para campañas recurrentes que incluyen:
+          </p>
+          <ul class="list-disc pl-5 space-y-2 mb-4">
+            <li>Descuentos por volumen</li>
+            <li>Calendario editorial planificado</li>
+            <li>Plantillas personalizadas</li>
+            <li>Entrega automática programada</li>
+            <li>Reportes mensuales de desempeño</li>
+          </ul>
+          <p>
+            Nuestro equipo se convierte en una extensión de tu departamento de marketing.
+          </p>
+        </div>
+      </div>
+
+      <!-- Pregunta 4 -->
+      <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden transition-all duration-300 hover:shadow-md">
+        <button 
+          (click)="toggle(3)" 
+          class="w-full flex justify-between items-center p-6 md:p-8 text-left focus:outline-none"
+        >
+          <h3 class="text-lg md:text-xl font-semibold text-gray-900">
+            ¿Puedo pedir solo un logotipo?
+          </h3>
+          <svg 
+            class="w-6 h-6 text-[#ba1b1b] transform transition-transform duration-300" 
+            [ngClass]="{'rotate-180': openStates[3]}" 
+            fill="none" 
+            stroke="currentColor" 
+            viewBox="0 0 24 24"
+          >
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </button>
+        
+        <div 
+          *ngIf="openStates[3]" 
+          class="px-6 md:px-8 pb-6 md:pb-8 pt-0 text-gray-600"
+        >
+          <p class="mb-4">
+            Sí, ofrecemos servicios à la carte donde puedes solicitar únicamente el diseño de logotipo. 
+            Este servicio incluye:
+          </p>
+          <ul class="list-disc pl-5 space-y-2 mb-4">
+            <li>3 conceptos iniciales</li>
+            <li>2 rondas de revisiones</li>
+            <li>Archivos vectoriales (AI, EPS, PDF)</li>
+            <li>Archivos para web (PNG, JPG)</li>
+            <li>Guía básica de uso</li>
+          </ul>
+          <p>
+            Sin embargo, recomendamos considerar nuestro paquete de identidad de marca completo para 
+            obtener mejores resultados.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
