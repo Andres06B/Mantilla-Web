@@ -15,6 +15,8 @@ import { ContactoComponent } from './Pages/Components/contacto/contacto.componen
 import { ReactiveFormsModule } from '@angular/forms';
 import { FooterComponent } from './Pages/Components/footer/footer.component';
 import { BwhatsapComponent } from './shared/bwhatsap/bwhatsap.component';
+import { VdisenoComponent } from './Pages/landing/view/vdiseno/vdiseno.component';
+import { MdigitalComponent } from './Pages/landing/view/mdigital/mdigital.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,9 @@ import { BwhatsapComponent } from './shared/bwhatsap/bwhatsap.component';
     FAQComponent,
     ContactoComponent,
     FooterComponent,
-    BwhatsapComponent
+    BwhatsapComponent,
+    VdisenoComponent,
+    MdigitalComponent
   ],
   imports: [
     BrowserModule,

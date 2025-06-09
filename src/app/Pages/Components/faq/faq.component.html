@@ -1,37 +1,51 @@
 <section id="FAQ" class="relative overflow-hidden bg-gradient-to-b from-gray-50 to-white py-20 md:py-28 lg:py-32">
-  <!-- Fondo decorativo -->
-  <div class="absolute inset-0 z-0 opacity-10">
+  <!-- Enhanced decorative background -->
+  <div class="absolute inset-0 z-0 opacity-5">
     <div class="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2IiBoZWlnaHQ9IjYiPjxyZWN0IHdpZHRoPSI2IiBoZWlnaHQ9IjYiIGZpbGw9IiNmZmYiLz48cGF0aCBkPSJNMCAwTDEgMU0yIDBMNSAzTTAgMkwyIDVNNSAxTDEgNSIgc3Ryb2tlPSJyZ2JhKDE4NiwyNywyNywwLjA1KSIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9zdmc+')]"></div>
   </div>
   
+  <!-- Floating decorative elements -->
+  <div class="absolute -left-20 -top-20 w-64 h-64 rounded-full bg-[#ba1b1b] opacity-5 blur-3xl"></div>
+  <div class="absolute -right-20 -bottom-20 w-64 h-64 rounded-full bg-[#ba1b1b] opacity-5 blur-3xl"></div>
+  
   <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <!-- Encabezado -->
+    <!-- Enhanced header -->
     <div class="text-center mb-16">
-      <div class="inline-flex items-center px-4 py-2 rounded-full bg-white border border-gray-200 shadow-sm mb-6">
+      <div class="inline-flex items-center px-4 py-2 rounded-full bg-white border border-gray-200 shadow-sm mb-6 transform transition-all duration-500 hover:scale-105 hover:shadow-md">
         <span class="w-2 h-2 rounded-full bg-[#ba1b1b] mr-2 animate-pulse"></span>
         <span class="text-sm font-medium text-gray-700">¿Tienes dudas?</span>
       </div>
       <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-        Preguntas <span class="text-[#ba1b1b]">Frecuentes</span>
+        Preguntas <span class="text-[#ba1b1b] relative inline-block">
+          Frecuentes
+          <span class="absolute -bottom-2 left-0 w-full h-1 bg-[#ba1b1b] transform scale-x-0 origin-left transition-transform duration-500 group-hover:scale-x-100"></span>
+        </span>
       </h2>
-      <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+      <p class="text-lg text-gray-600 max-w-3xl mx-auto animate-fade-in-up">
         Resolvemos tus inquietudes sobre nuestros servicios de diseño e impresión.
       </p>
     </div>
 
-    <!-- Acordeón de preguntas -->
+    <!-- Enhanced accordion -->
     <div class="max-w-4xl mx-auto space-y-4">
-      <!-- Pregunta 1 -->
-      <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden transition-all duration-300 hover:shadow-md">
+      <!-- Question 1 - Enhanced -->
+      <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden transition-all duration-300 hover:shadow-lg hover:border-[#ba1b1b]/30">
         <button 
           (click)="toggle(0)" 
-          class="w-full flex justify-between items-center p-6 md:p-8 text-left focus:outline-none"
+          class="w-full flex justify-between items-center p-6 md:p-8 text-left focus:outline-none cursor-pointer group"
         >
-          <h3 class="text-lg md:text-xl font-semibold text-gray-900">
-            ¿Qué incluye una propuesta creativa?
-          </h3>
+          <div class="flex items-start">
+            <div class="bg-[#ba1b1b]/10 p-2 rounded-lg mr-4 group-hover:bg-[#ba1b1b]/20 transition-colors duration-300">
+              <svg class="w-6 h-6 text-[#ba1b1b]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+              </svg>
+            </div>
+            <h3 class="text-lg md:text-xl font-semibold text-gray-900 group-hover:text-[#ba1b1b] transition-colors duration-300">
+              ¿Qué incluye una propuesta creativa?
+            </h3>
+          </div>
           <svg 
-            class="w-6 h-6 text-[#ba1b1b] transform transition-transform duration-300" 
+            class="w-6 h-6 text-[#ba1b1b] transform transition-transform duration-300 flex-shrink-0" 
             [ngClass]="{'rotate-180': openStates[0]}" 
             fill="none" 
             stroke="currentColor" 
@@ -43,30 +57,39 @@
         
         <div 
           *ngIf="openStates[0]" 
-          class="px-6 md:px-8 pb-6 md:pb-8 pt-0 text-gray-600"
+          class="px-6 md:px-8 pb-6 md:pb-8 pt-0 text-gray-600 animate-fade-in"
         >
-          <p class="mb-4">
-            Nuestras propuestas creativas incluyen un análisis detallado de tus necesidades, investigación de mercado, 
-            conceptos iniciales (3 opciones de diseño), revisiones ilimitadas, y los archivos finales en todos los 
-            formatos necesarios para impresión y digital.
-          </p>
-          <p>
-            También incluye una guía de marca con recomendaciones de uso, colores corporativos y tipografías.
-          </p>
+          <div class="pl-10 border-l-2 border-[#ba1b1b]/20">
+            <p class="mb-4">
+              Nuestras propuestas creativas incluyen un análisis detallado de tus necesidades, investigación de mercado, 
+              conceptos iniciales (3 opciones de diseño), revisiones ilimitadas, y los archivos finales en todos los 
+              formatos necesarios para impresión y digital.
+            </p>
+            <p>
+              También incluye una guía de marca con recomendaciones de uso, colores corporativos y tipografías.
+            </p>
+          </div>
         </div>
       </div>
 
-      <!-- Pregunta 2 -->
-      <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden transition-all duration-300 hover:shadow-md">
+      <!-- Question 2 - Enhanced -->
+      <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden transition-all duration-300 hover:shadow-lg hover:border-[#ba1b1b]/30">
         <button 
           (click)="toggle(1)" 
-          class="w-full flex justify-between items-center p-6 md:p-8 text-left focus:outline-none"
+          class="w-full flex justify-between items-center p-6 md:p-8 text-left focus:outline-none cursor-pointer group"
         >
-          <h3 class="text-lg md:text-xl font-semibold text-gray-900">
-            ¿En cuánto tiempo entregan un diseño?
-          </h3>
+          <div class="flex items-start">
+            <div class="bg-[#ba1b1b]/10 p-2 rounded-lg mr-4 group-hover:bg-[#ba1b1b]/20 transition-colors duration-300">
+              <svg class="w-6 h-6 text-[#ba1b1b]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </div>
+            <h3 class="text-lg md:text-xl font-semibold text-gray-900 group-hover:text-[#ba1b1b] transition-colors duration-300">
+              ¿En cuánto tiempo entregan un diseño?
+            </h3>
+          </div>
           <svg 
-            class="w-6 h-6 text-[#ba1b1b] transform transition-transform duration-300" 
+            class="w-6 h-6 text-[#ba1b1b] transform transition-transform duration-300 flex-shrink-0" 
             [ngClass]="{'rotate-180': openStates[1]}" 
             fill="none" 
             stroke="currentColor" 
@@ -78,33 +101,42 @@
         
         <div 
           *ngIf="openStates[1]" 
-          class="px-6 md:px-8 pb-6 md:pb-8 pt-0 text-gray-600"
+          class="px-6 md:px-8 pb-6 md:pb-8 pt-0 text-gray-600 animate-fade-in"
         >
-          <p class="mb-4">
-            Los tiempos varían según la complejidad del proyecto:
-          </p>
-          <ul class="list-disc pl-5 space-y-2">
-            <li><strong>Logotipos:</strong> 5-7 días hábiles para los primeros conceptos</li>
-            <li><strong>Diseño gráfico:</strong> 3-5 días hábiles por pieza</li>
-            <li><strong>Material impreso:</strong> 2-3 días hábiles después de aprobación final</li>
-          </ul>
-          <p class="mt-4">
-            Trabajamos con entregas escalonadas para que puedas revisar y aprobar cada fase.
-          </p>
+          <div class="pl-10 border-l-2 border-[#ba1b1b]/20">
+            <p class="mb-4">
+              Los tiempos varían según la complejidad del proyecto:
+            </p>
+            <ul class="list-disc pl-5 space-y-2 marker:text-[#ba1b1b]">
+              <li class="transition-colors duration-200 hover:text-gray-900"><strong>Logotipos:</strong> 5-7 días hábiles para los primeros conceptos</li>
+              <li class="transition-colors duration-200 hover:text-gray-900"><strong>Diseño gráfico:</strong> 3-5 días hábiles por pieza</li>
+              <li class="transition-colors duration-200 hover:text-gray-900"><strong>Material impreso:</strong> 2-3 días hábiles después de aprobación final</li>
+            </ul>
+            <p class="mt-4">
+              Trabajamos con entregas escalonadas para que puedas revisar y aprobar cada fase.
+            </p>
+          </div>
         </div>
       </div>
 
-      <!-- Pregunta 3 -->
-      <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden transition-all duration-300 hover:shadow-md">
+      <!-- Question 3 - Enhanced -->
+      <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden transition-all duration-300 hover:shadow-lg hover:border-[#ba1b1b]/30">
         <button 
           (click)="toggle(2)" 
-          class="w-full flex justify-between items-center p-6 md:p-8 text-left focus:outline-none"
+          class="w-full flex justify-between items-center p-6 md:p-8 text-left focus:outline-none cursor-pointer group"
         >
-          <h3 class="text-lg md:text-xl font-semibold text-gray-900">
-            ¿Pueden manejar campañas mensuales?
-          </h3>
+          <div class="flex items-start">
+            <div class="bg-[#ba1b1b]/10 p-2 rounded-lg mr-4 group-hover:bg-[#ba1b1b]/20 transition-colors duration-300">
+              <svg class="w-6 h-6 text-[#ba1b1b]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+              </svg>
+            </div>
+            <h3 class="text-lg md:text-xl font-semibold text-gray-900 group-hover:text-[#ba1b1b] transition-colors duration-300">
+              ¿Pueden manejar campañas mensuales?
+            </h3>
+          </div>
           <svg 
-            class="w-6 h-6 text-[#ba1b1b] transform transition-transform duration-300" 
+            class="w-6 h-6 text-[#ba1b1b] transform transition-transform duration-300 flex-shrink-0" 
             [ngClass]="{'rotate-180': openStates[2]}" 
             fill="none" 
             stroke="currentColor" 
@@ -116,35 +148,44 @@
         
         <div 
           *ngIf="openStates[2]" 
-          class="px-6 md:px-8 pb-6 md:pb-8 pt-0 text-gray-600"
+          class="px-6 md:px-8 pb-6 md:pb-8 pt-0 text-gray-600 animate-fade-in"
         >
-          <p class="mb-4">
-            ¡Absolutamente! Tenemos paquetes especiales para campañas recurrentes que incluyen:
-          </p>
-          <ul class="list-disc pl-5 space-y-2 mb-4">
-            <li>Descuentos por volumen</li>
-            <li>Calendario editorial planificado</li>
-            <li>Plantillas personalizadas</li>
-            <li>Entrega automática programada</li>
-            <li>Reportes mensuales de desempeño</li>
-          </ul>
-          <p>
-            Nuestro equipo se convierte en una extensión de tu departamento de marketing.
-          </p>
+          <div class="pl-10 border-l-2 border-[#ba1b1b]/20">
+            <p class="mb-4">
+              ¡Absolutamente! Tenemos paquetes especiales para campañas recurrentes que incluyen:
+            </p>
+            <ul class="list-disc pl-5 space-y-2 mb-4 marker:text-[#ba1b1b]">
+              <li class="transition-colors duration-200 hover:text-gray-900">Descuentos por volumen</li>
+              <li class="transition-colors duration-200 hover:text-gray-900">Calendario editorial planificado</li>
+              <li class="transition-colors duration-200 hover:text-gray-900">Plantillas personalizadas</li>
+              <li class="transition-colors duration-200 hover:text-gray-900">Entrega automática programada</li>
+              <li class="transition-colors duration-200 hover:text-gray-900">Reportes mensuales de desempeño</li>
+            </ul>
+            <p>
+              Nuestro equipo se convierte en una extensión de tu departamento de marketing.
+            </p>
+          </div>
         </div>
       </div>
 
-      <!-- Pregunta 4 -->
-      <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden transition-all duration-300 hover:shadow-md">
+      <!-- Question 4 - Enhanced -->
+      <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden transition-all duration-300 hover:shadow-lg hover:border-[#ba1b1b]/30">
         <button 
           (click)="toggle(3)" 
-          class="w-full flex justify-between items-center p-6 md:p-8 text-left focus:outline-none"
+          class="w-full flex justify-between items-center p-6 md:p-8 text-left focus:outline-none cursor-pointer group"
         >
-          <h3 class="text-lg md:text-xl font-semibold text-gray-900">
-            ¿Puedo pedir solo un logotipo?
-          </h3>
+          <div class="flex items-start">
+            <div class="bg-[#ba1b1b]/10 p-2 rounded-lg mr-4 group-hover:bg-[#ba1b1b]/20 transition-colors duration-300">
+              <svg class="w-6 h-6 text-[#ba1b1b]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+              </svg>
+            </div>
+            <h3 class="text-lg md:text-xl font-semibold text-gray-900 group-hover:text-[#ba1b1b] transition-colors duration-300">
+              ¿Puedo pedir solo un logotipo?
+            </h3>
+          </div>
           <svg 
-            class="w-6 h-6 text-[#ba1b1b] transform transition-transform duration-300" 
+            class="w-6 h-6 text-[#ba1b1b] transform transition-transform duration-300 flex-shrink-0" 
             [ngClass]="{'rotate-180': openStates[3]}" 
             fill="none" 
             stroke="currentColor" 
@@ -156,25 +197,60 @@
         
         <div 
           *ngIf="openStates[3]" 
-          class="px-6 md:px-8 pb-6 md:pb-8 pt-0 text-gray-600"
+          class="px-6 md:px-8 pb-6 md:pb-8 pt-0 text-gray-600 animate-fade-in"
         >
-          <p class="mb-4">
-            Sí, ofrecemos servicios à la carte donde puedes solicitar únicamente el diseño de logotipo. 
-            Este servicio incluye:
-          </p>
-          <ul class="list-disc pl-5 space-y-2 mb-4">
-            <li>3 conceptos iniciales</li>
-            <li>2 rondas de revisiones</li>
-            <li>Archivos vectoriales (AI, EPS, PDF)</li>
-            <li>Archivos para web (PNG, JPG)</li>
-            <li>Guía básica de uso</li>
-          </ul>
-          <p>
-            Sin embargo, recomendamos considerar nuestro paquete de identidad de marca completo para 
-            obtener mejores resultados.
-          </p>
+          <div class="pl-10 border-l-2 border-[#ba1b1b]/20">
+            <p class="mb-4">
+              Sí, ofrecemos servicios à la carte donde puedes solicitar únicamente el diseño de logotipo. 
+              Este servicio incluye:
+            </p>
+            <ul class="list-disc pl-5 space-y-2 mb-4 marker:text-[#ba1b1b]">
+              <li class="transition-colors duration-200 hover:text-gray-900">3 conceptos iniciales</li>
+              <li class="transition-colors duration-200 hover:text-gray-900">2 rondas de revisiones</li>
+              <li class="transition-colors duration-200 hover:text-gray-900">Archivos vectoriales (AI, EPS, PDF)</li>
+              <li class="transition-colors duration-200 hover:text-gray-900">Archivos para web (PNG, JPG)</li>
+              <li class="transition-colors duration-200 hover:text-gray-900">Guía básica de uso</li>
+            </ul>
+            <p>
+              Sin embargo, recomendamos considerar nuestro paquete de identidad de marca completo para 
+              obtener mejores resultados.
+            </p>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
+
+<!-- Add this to your stylesheet or in a style tag -->
+<style>
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+  
+  .animate-fade-in-up {
+    animation: fadeInUp 0.6s ease-out forwards;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* Custom bullet points for lists */
+  ul.list-disc li::marker {
+    color: #ba1b1b;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 640px) {
+    .faq-item {
+      padding: 1rem;
+    }
+  }
+</style>
