@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { BwhatsapComponent } from './bwhatsap.component';
+import { ChatbotButtonComponent } from './chatbot-button.component';
 
-describe('BwhatsapComponent', () => {
-  let component: BwhatsapComponent;
-  let fixture: ComponentFixture<BwhatsapComponent>;
+describe('ChatbotButtonComponent', () => {
+  let component: ChatbotButtonComponent;
+  let fixture: ComponentFixture<ChatbotButtonComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [BwhatsapComponent]
+      declarations: [ChatbotButtonComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(BwhatsapComponent);
+    fixture = TestBed.createComponent(ChatbotButtonComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

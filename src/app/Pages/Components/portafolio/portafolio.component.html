@@ -1,274 +1,203 @@
-<section id="Portafolio" class="relative py-20 bg-gradient-to-b from-white to-gray-50 overflow-hidden">
-  <!-- Fondo decorativo animado -->
-  <div class="absolute inset-0 z-0 opacity-10">
-    <div class="absolute top-0 left-0 w-64 h-64 -ml-32 -mt-32 bg-[#ba1b1b] rounded-full blur-3xl opacity-5 animate-pulse animation-delay-1000"></div>
-    <div class="absolute bottom-0 right-0 w-96 h-96 -mr-48 -mb-48 bg-[#ba1b1b] rounded-full blur-3xl opacity-5 animate-pulse"></div>
-  </div>
-  
-  <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <!-- Encabezado con animación -->
-    <div class="text-center mb-16 animate-fade-in-up">
-      <span class="inline-flex items-center px-4 py-2 bg-[#ba1b1b] bg-opacity-10 text-[#ba1b1b] rounded-full text-sm font-medium mb-4">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
-          <path fill-rule="evenodd" d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v3.57A22.952 22.952 0 0110 13a22.95 22.95 0 01-8-1.43V8a2 2 0 012-2h2zm2-1a1 1 0 011-1h2a1 1 0 011 1v1H8V5zm1 5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z" clip-rule="evenodd" />
-          <path d="M2 13.692V16a2 2 0 002 2h12a2 2 0 002-2v-2.308A24.974 24.974 0 0110 15c-2.796 0-5.487-.46-8-1.308z" />
-        </svg>
+<section id="Portafolio" class="py-20 bg-gradient-to-b from-gray-50 to-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Encabezado mejorado -->
+    <div class="text-center mb-16">
+      <span class="inline-block px-4 py-2 bg-red-50 text-red-600 rounded-full text-sm font-semibold tracking-wide uppercase mb-4 shadow-sm">
         Nuestro Trabajo
       </span>
-      <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-        <span class="block">Portafolio</span>
-        <span class="block text-transparent bg-clip-text bg-gradient-to-r from-[#ba1b1b] to-[#d11d27] animate-text-gradient">Creativo</span>
+      <h2 class="text-5xl font-extrabold text-gray-900 mb-4">
+        <span class="bg-clip-text text-transparent bg-gradient-to-r from-red-600 to-red-400">Portafolio</span> Gráfico
       </h2>
-      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-        Explora nuestros proyectos destacados. Cada trabajo cuenta una historia de creatividad y excelencia en ejecución.
-      </p>
+      <div class="max-w-3xl mx-auto">
+        <p class="text-xl text-gray-600 leading-relaxed">
+          Descubre nuestra colección de diseños gráficos profesionales que combinan creatividad y estrategia para comunicar efectivamente.
+        </p>
+      </div>
     </div>
 
-    <!-- Filtros con iconos -->
-    <div class="flex flex-wrap justify-center gap-3 mb-12">
-      <button 
-        *ngFor="let filter of [
-          {id: 'all', name: 'Todos', icon: 'M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z'},
-          {id: 'branding', name: 'Branding', icon: 'M10 6H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2h-5m-4 0V5a2 2 0 114 0v1m-4 0a2 2 0 104 0m-5 8a2 2 0 100-4 2 2 0 000 4zm0 0c1.306 0 2.417.835 2.83 2M9 14a3.001 3.001 0 00-2.83 2M15 11h3m-3 4h2'},
-          {id: 'digital', name: 'Digital', icon: 'M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z'},
-          {id: 'impresos', name: 'Impresos', icon: 'M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253'},
-          {id: 'empaques', name: 'Empaques', icon: 'M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4'}
-        ]"
-        [class.bg-[#ba1b1b]]="activeFilter === filter.id"
-        [class.text-white]="activeFilter === filter.id"
-        [class.bg-white]="activeFilter !== filter.id"
-        [class.border]="activeFilter !== filter.id"
-        [class.text-gray-700]="activeFilter !== filter.id"
-        class="flex items-center px-6 py-2 rounded-full font-medium hover:bg-gray-50 transition-all duration-300 hover:shadow-sm"
-        (click)="filterItems(filter.id)">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
-          <path fill-rule="evenodd" d="M${filter.icon}" clip-rule="evenodd" />
-        </svg>
-        {{filter.name}}
+    <!-- Filtros mejorados -->
+    <div class="flex flex-wrap justify-center gap-2 mb-12">
+      <button class="px-5 py-2.5 bg-gradient-to-r from-red-600 to-red-500 text-white rounded-lg text-sm font-semibold shadow-md hover:from-red-700 hover:to-red-600 transition-all duration-300 transform hover:-translate-y-0.5">
+        Todos
+      </button>
+      <button class="px-5 py-2.5 bg-white border border-gray-200 text-gray-700 rounded-lg text-sm font-medium hover:bg-gray-50 shadow-sm transition-all duration-300">
+        Banners
+      </button>
+      <button class="px-5 py-2.5 bg-white border border-gray-200 text-gray-700 rounded-lg text-sm font-medium hover:bg-gray-50 shadow-sm transition-all duration-300">
+        Posters
+      </button>
+      <button class="px-5 py-2.5 bg-white border border-gray-200 text-gray-700 rounded-lg text-sm font-medium hover:bg-gray-50 shadow-sm transition-all duration-300">
+        Tarjetas
+      </button>
+      <button class="px-5 py-2.5 bg-white border border-gray-200 text-gray-700 rounded-lg text-sm font-medium hover:bg-gray-50 shadow-sm transition-all duration-300">
+        Flyers
+      </button>
+      <button class="px-5 py-2.5 bg-white border border-gray-200 text-gray-700 rounded-lg text-sm font-medium hover:bg-gray-50 shadow-sm transition-all duration-300">
+        Logos
       </button>
     </div>
 
-    <!-- Grid de proyectos con animaciones -->
+    <!-- Grid de diseños mejorado -->
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-      <!-- Proyecto -->
-      <div *ngFor="let item of getVisibleItems(); let i = index" 
-           class="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 animate-fade-in-up"
-           [style.animation-delay.ms]="i * 100">
-        
-        <div class="relative h-80 bg-gray-100 overflow-hidden">
-          <!-- Mockup dinámico según tipo -->
-          <ng-container [ngSwitch]="item.mockupType">
-            <!-- Mockup de laptop -->
-            <div *ngSwitchCase="'laptop'" class="absolute inset-0 flex items-center justify-center p-8">
-              <div class="relative w-full h-full bg-gray-900 rounded-lg overflow-hidden shadow-2xl transform transition-transform duration-700 group-hover:scale-[1.02]">
-                <div class="absolute top-0 left-0 right-0 h-6 bg-gray-800 flex items-center px-3 z-10">
-                  <div class="flex space-x-2">
-                    <div class="w-3 h-3 rounded-full bg-red-500"></div>
-                    <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
-                    <div class="w-3 h-3 rounded-full bg-green-500"></div>
-                  </div>
-                </div>
-                <div class="absolute bottom-0 left-0 right-0 h-1 bg-gray-800 rounded-b-lg z-10"></div>
-                <img [src]="item.imageUrl" 
-                     [alt]="item.title" 
-                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                     loading="lazy">
-              </div>
-            </div>
-
-            <!-- Mockup de móvil -->
-            <div *ngSwitchCase="'mobile'" class="absolute inset-0 flex items-center justify-center p-8">
-              <div class="relative w-3/4 h-4/5 bg-gray-900 rounded-3xl overflow-hidden shadow-2xl border-8 border-gray-900 transform transition-transform duration-700 group-hover:scale-[1.05]">
-                <div class="absolute top-0 left-1/2 transform -translate-x-1/2 w-1/3 h-6 bg-gray-900 rounded-b-lg z-10"></div>
-                <div class="absolute bottom-2 left-1/2 transform -translate-x-1/2 w-8 h-8 rounded-full border-2 border-gray-700"></div>
-                <img [src]="item.imageUrl" 
-                     [alt]="item.title" 
-                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                     loading="lazy">
-              </div>
-            </div>
-
-            <!-- Mockup de revista -->
-            <div *ngSwitchCase="'magazine'" class="absolute inset-0 flex items-center justify-center p-8">
-              <div class="relative w-full h-full bg-white shadow-2xl flex items-center justify-center transform transition-transform duration-700 group-hover:scale-[1.03]">
-                <div class="absolute inset-0 bg-gray-100 transform -skew-y-2 scale-95 opacity-30"></div>
-                <img [src]="item.imageUrl" 
-                     [alt]="item.title" 
-                     class="w-4/5 h-4/5 object-cover shadow-lg transition-transform duration-700 group-hover:scale-105"
-                     loading="lazy">
-                <div class="absolute -bottom-4 -right-4 w-16 h-16 bg-[#ba1b1b] rounded-full opacity-20"></div>
-              </div>
-            </div>
-
-            <!-- Mockup de empaque -->
-            <div *ngSwitchCase="'packaging'" class="absolute inset-0 flex items-center justify-center p-8">
-              <div class="relative w-full h-full flex items-center justify-center perspective-1000">
-                <div class="relative w-3/4 h-3/4 transform rotate-y-15 transition-transform duration-700 group-hover:rotate-y-5 group-hover:scale-[1.05]">
-                  <div class="absolute inset-0 bg-white shadow-xl rounded-lg overflow-hidden">
-                    <img [src]="item.imageUrl" 
-                         [alt]="item.title" 
-                         class="w-full h-full object-cover"
-                         loading="lazy">
-                  </div>
-                  <div class="absolute left-0 top-0 w-1/4 h-full bg-gray-100 transform origin-left rotate-y-90"></div>
-                  <div class="absolute right-0 top-0 w-1/4 h-full bg-gray-50 transform origin-right -rotate-y-90"></div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Mockup de papelería -->
-            <div *ngSwitchCase="'stationery'" class="absolute inset-0 flex items-center justify-center p-8">
-              <div class="relative w-full h-full flex flex-col items-center justify-center space-y-4">
-                <div class="w-3/4 h-1/3 bg-white shadow-md transform -rotate-2 transition-transform duration-700 group-hover:rotate-0 group-hover:scale-[1.03]">
-                  <img [src]="item.imageUrl" 
-                       [alt]="item.title" 
-                       class="w-full h-full object-cover"
-                       loading="lazy">
-                </div>
-                <div class="w-3/4 h-1/3 bg-white shadow-md transform rotate-3 transition-transform duration-700 group-hover:rotate-0 group-hover:scale-[1.03]">
-                  <img src="https://images.unsplash.com/photo-1600185288871-af1a4a84c7cd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
-                       alt="Sobres corporativos" 
-                       class="w-full h-full object-cover"
-                       loading="lazy">
-                </div>
-                <div class="absolute -bottom-2 -left-2 w-10 h-10 bg-[#ba1b1b] rounded-full opacity-10"></div>
-              </div>
-            </div>
-
-            <!-- Mockup de dashboard -->
-            <div *ngSwitchCase="'dashboard'" class="absolute inset-0 flex items-center justify-center p-8">
-              <div class="relative w-full h-full bg-gray-100 rounded-lg overflow-hidden shadow-2xl flex items-center justify-center transform transition-transform duration-700 group-hover:scale-[1.02]">
-                <div class="absolute top-0 left-0 right-0 h-8 bg-gray-200 flex items-center px-4 z-10">
-                  <div class="flex space-x-2">
-                    <div class="w-2 h-2 rounded-full bg-gray-400"></div>
-                    <div class="w-2 h-2 rounded-full bg-gray-400"></div>
-                    <div class="w-2 h-2 rounded-full bg-gray-400"></div>
-                  </div>
-                  <div class="ml-2 text-xs text-gray-600">Dashboard Analytics</div>
-                </div>
-                <div class="absolute bottom-0 left-0 right-0 h-2 bg-gradient-to-r from-[#ba1b1b] to-[#d11d27] opacity-80"></div>
-                <img [src]="item.imageUrl" 
-                     [alt]="item.title" 
-                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                     loading="lazy">
-              </div>
-            </div>
-          </ng-container>
+      <!-- Banner 1 -->
+      <div class="group relative overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500">
+        <div class="h-72 bg-gradient-to-br from-gray-100 to-gray-200 overflow-hidden flex items-center justify-center p-4">
+          <img src="https://images.unsplash.com/photo-1605000797499-95a51c5269ae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+               alt="Banner promocional" 
+               class="w-full h-auto max-h-full object-contain transition-transform duration-700 group-hover:scale-110">
         </div>
-        
-        <!-- Overlay con información -->
-        <div class="absolute inset-0 bg-gradient-to-t from-[#ba1b1b] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
-          <div class="transform translate-y-8 group-hover:translate-y-0 transition-transform duration-300">
-            <h3 class="text-xl font-bold text-white mb-2">{{item.title}}</h3>
-            <p class="text-gray-200 mb-4">{{item.description}}</p>
-            <div class="flex items-center">
-              <span class="inline-flex items-center px-3 py-1 bg-white text-[#ba1b1b] rounded-full text-sm font-medium">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" viewBox="0 0 20 20" fill="currentColor">
-                  <path fill-rule="evenodd" d="M17.707 9.293a1 1 0 010 1.414l-7 7a1 1 0 01-1.414 0l-7-7A.997.997 0 012 10V5a3 3 0 013-3h5c.256 0 .512.098.707.293l7 7zM5 6a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd" />
-                </svg>
-                {{item.category | titlecase}}
-              </span>
-              <button class="ml-auto bg-white bg-opacity-20 text-white p-2 rounded-full hover:bg-opacity-30 transition-all">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" />
-                </svg>
-              </button>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
+          <div class="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+            <h3 class="font-bold text-xl text-white mb-1">Banner Promocional</h3>
+            <p class="text-gray-200 text-sm mb-3">Diseño para evento de verano con enfoque en conversiones</p>
+            <span class="inline-block px-3 py-1 bg-red-600 text-white rounded-full text-xs font-medium">Marketing Digital</span>
+          </div>
+        </div>
+        <div class="p-5 bg-white">
+          <div class="flex justify-between items-start">
+            <div>
+              <h3 class="font-bold text-lg text-gray-900 mb-1">Banner Promocional</h3>
+              <p class="text-gray-600 text-sm">Evento de verano</p>
             </div>
+            <span class="inline-block px-2.5 py-1 bg-red-100 text-red-600 rounded-full text-xs font-semibold">Banner</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Poster 1 -->
+      <div class="group relative overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500">
+        <div class="h-72 bg-gradient-to-br from-blue-50 to-blue-100 overflow-hidden flex items-center justify-center p-4">
+          <img src="https://images.unsplash.com/photo-1561212024-cb9ad0c331b5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+               alt="Poster musical" 
+               class="w-full h-auto max-h-full object-contain transition-transform duration-700 group-hover:scale-110">
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
+          <div class="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+            <h3 class="font-bold text-xl text-white mb-1">Poster Musical</h3>
+            <p class="text-gray-200 text-sm mb-3">Diseño impactante para concierto con tipografía creativa</p>
+            <span class="inline-block px-3 py-1 bg-blue-600 text-white rounded-full text-xs font-medium">Evento</span>
+          </div>
+        </div>
+        <div class="p-5 bg-white">
+          <div class="flex justify-between items-start">
+            <div>
+              <h3 class="font-bold text-lg text-gray-900 mb-1">Poster Musical</h3>
+              <p class="text-gray-600 text-sm">Concierto en vivo</p>
+            </div>
+            <span class="inline-block px-2.5 py-1 bg-blue-100 text-blue-600 rounded-full text-xs font-semibold">Poster</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tarjeta 1 -->
+      <div class="group relative overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500">
+        <div class="h-72 bg-gradient-to-br from-green-50 to-green-100 overflow-hidden flex items-center justify-center p-4">
+          <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+               alt="Tarjeta de presentación" 
+               class="h-full w-auto object-contain transition-transform duration-700 group-hover:scale-110">
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
+          <div class="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+            <h3 class="font-bold text-xl text-white mb-1">Tarjeta Corporativa</h3>
+            <p class="text-gray-200 text-sm mb-3">Diseño minimalista que refleja profesionalismo y elegancia</p>
+            <span class="inline-block px-3 py-1 bg-green-600 text-white rounded-full text-xs font-medium">Branding</span>
+          </div>
+        </div>
+        <div class="p-5 bg-white">
+          <div class="flex justify-between items-start">
+            <div>
+              <h3 class="font-bold text-lg text-gray-900 mb-1">Tarjeta Corporativa</h3>
+              <p class="text-gray-600 text-sm">Identidad de marca</p>
+            </div>
+            <span class="inline-block px-2.5 py-1 bg-green-100 text-green-600 rounded-full text-xs font-semibold">Tarjeta</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Flyer 1 -->
+      <div class="group relative overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500">
+        <div class="h-72 bg-gradient-to-br from-yellow-50 to-yellow-100 overflow-hidden flex items-center justify-center p-4">
+          <img src="https://images.unsplash.com/photo-1545239351-ef35f43d514b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+               alt="Flyer promocional" 
+               class="w-full h-auto max-h-full object-contain transition-transform duration-700 group-hover:scale-110">
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
+          <div class="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+            <h3 class="font-bold text-xl text-white mb-1">Flyer Promocional</h3>
+            <p class="text-gray-200 text-sm mb-3">Diseño llamativo para promoción de temporada con CTA efectivo</p>
+            <span class="inline-block px-3 py-1 bg-yellow-600 text-white rounded-full text-xs font-medium">Promoción</span>
+          </div>
+        </div>
+        <div class="p-5 bg-white">
+          <div class="flex justify-between items-start">
+            <div>
+              <h3 class="font-bold text-lg text-gray-900 mb-1">Flyer Promocional</h3>
+              <p class="text-gray-600 text-sm">Oferta de temporada</p>
+            </div>
+            <span class="inline-block px-2.5 py-1 bg-yellow-100 text-yellow-600 rounded-full text-xs font-semibold">Flyer</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Banner 2 -->
+      <div class="group relative overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500">
+        <div class="h-72 bg-gradient-to-br from-purple-50 to-purple-100 overflow-hidden flex items-center justify-center p-4">
+          <img src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+               alt="Banner web" 
+               class="w-full h-auto max-h-full object-contain transition-transform duration-700 group-hover:scale-110">
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
+          <div class="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+            <h3 class="font-bold text-xl text-white mb-1">Banner Web</h3>
+            <p class="text-gray-200 text-sm mb-3">Diseño optimizado para redes sociales con alta tasa de engagement</p>
+            <span class="inline-block px-3 py-1 bg-purple-600 text-white rounded-full text-xs font-medium">Social Media</span>
+          </div>
+        </div>
+        <div class="p-5 bg-white">
+          <div class="flex justify-between items-start">
+            <div>
+              <h3 class="font-bold text-lg text-gray-900 mb-1">Banner Web</h3>
+              <p class="text-gray-600 text-sm">Redes sociales</p>
+            </div>
+            <span class="inline-block px-2.5 py-1 bg-purple-100 text-purple-600 rounded-full text-xs font-semibold">Banner</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tarjeta 2 -->
+      <div class="group relative overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500">
+        <div class="h-72 bg-gradient-to-br from-pink-50 to-pink-100 overflow-hidden flex items-center justify-center p-4">
+          <img src="https://images.unsplash.com/photo-1588690154757-badf4644190f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+               alt="Tarjeta de invitación" 
+               class="h-full w-auto object-contain transition-transform duration-700 group-hover:scale-110">
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
+          <div class="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+            <h3 class="font-bold text-xl text-white mb-1">Tarjeta de Invitación</h3>
+            <p class="text-gray-200 text-sm mb-3">Diseño elegante para boda con detalles en relieve y tipografía sofisticada</p>
+            <span class="inline-block px-3 py-1 bg-pink-600 text-white rounded-full text-xs font-medium">Bodas</span>
+          </div>
+        </div>
+        <div class="p-5 bg-white">
+          <div class="flex justify-between items-start">
+            <div>
+              <h3 class="font-bold text-lg text-gray-900 mb-1">Tarjeta de Invitación</h3>
+              <p class="text-gray-600 text-sm">Diseño para boda</p>
+            </div>
+            <span class="inline-block px-2.5 py-1 bg-pink-100 text-pink-600 rounded-full text-xs font-semibold">Tarjeta</span>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Botón para cargar más proyectos -->
-    <div class="text-center mt-12" *ngIf="!allItemsLoaded && filteredItems.length > displayedItems">
-      <button (click)="loadMore()"
-              class="inline-flex items-center px-8 py-3 bg-white border-2 border-[#ba1b1b] text-[#ba1b1b] font-medium rounded-lg hover:bg-[#ba1b1b] hover:text-white transition-all duration-300 hover:shadow-md hover:scale-105 active:scale-95">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
-          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z" clip-rule="evenodd" />
+    <!-- Botón mejorado -->
+    <div class="text-center mt-14">
+      <button class="px-8 py-4 bg-gradient-to-r from-red-600 to-red-500 text-white font-semibold rounded-lg hover:from-red-700 hover:to-red-600 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 inline-flex items-center">
+        Explorar más proyectos
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
+          <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
         </svg>
-        Ver más proyectos
-      </button>
-    </div>
-
-    <div class="text-center mt-12" *ngIf="allItemsLoaded || filteredItems.length <= displayedItems">
-      <button class="inline-flex items-center px-8 py-3 bg-white border-2 border-[#ba1b1b] text-[#ba1b1b] font-medium rounded-lg opacity-50 cursor-not-allowed">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
-          <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-        </svg>
-        Todos los proyectos cargados
       </button>
     </div>
   </div>
 </section>
-
-<!-- Añade estas animaciones en tu CSS global -->
-<style>
-  .animate-fade-in-up {
-    animation: fadeInUp 0.6s ease-out forwards;
-  }
-  
-  @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  .animate-pulse {
-    animation: pulse 6s infinite ease-in-out;
-  }
-  
-  .animation-delay-1000 {
-    animation-delay: 1s;
-  }
-  
-  @keyframes pulse {
-    0%, 100% {
-      transform: scale(1);
-    }
-    50% {
-      transform: scale(1.05);
-    }
-  }
-  
-  .animate-text-gradient {
-    animation: textGradient 8s ease infinite;
-    background-size: 200% 200%;
-  }
-  
-  @keyframes textGradient {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
-  }
-  
-  .perspective-1000 {
-    perspective: 1000px;
-  }
-  
-  .rotate-y-15 {
-    transform: rotateY(15deg);
-  }
-  
-  .rotate-y-5 {
-    transform: rotateY(5deg);
-  }
-  
-  .rotate-y-90 {
-    transform: rotateY(90deg);
-  }
-  
-  .-rotate-y-90 {
-    transform: rotateY(-90deg);
-  }
-</style>

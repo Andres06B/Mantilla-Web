@@ -8,34 +8,27 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrl: './contacto.component.css'
 })
 export class ContactoComponent {
-  contactForm: FormGroup;
-  services = [
-    'Diseño Gráfico',
-    'Desarrollo Web',
-    'Marketing Digital',
-    'Branding',
-    'Otro'
-  ];
+  orderForm: FormGroup;
 
   constructor(private fb: FormBuilder) {
-    this.contactForm = this.fb.group({
+    this.orderForm = this.fb.group({
       fullName: ['', [Validators.required, Validators.minLength(3)]],
-      company: [''],
+      phone: ['', [Validators.required, Validators.pattern(/^[0-9]{10}$/)]],
       email: ['', [Validators.required, Validators.email]],
-      whatsapp: ['', [Validators.required, Validators.pattern(/^[0-9]+$/)]],
-      service: ['', Validators.required],
-      message: ['', [Validators.required, Validators.minLength(10)]]
+      orderType: ['', Validators.required],
+      requiredDate: ['', Validators.required],
+      description: ['', [Validators.required, Validators.minLength(10)]]
     });
   }
 
   onSubmit() {
-    if (this.contactForm.valid) {
-      console.log('Formulario enviado:', this.contactForm.value);
-      // Aquí puedes agregar la lógica para enviar el formulario
-      alert('¡Gracias por tu mensaje! Nos pondremos en contacto contigo pronto.');
-      this.contactForm.reset();
+    if (this.orderForm.valid) {
+      console.log('Formulario enviado:', this.orderForm.value);
+      // Aquí iría la lógica para enviar el formulario
+      alert('¡Gracias por tu pedido! Nos pondremos en contacto contigo pronto.');
+      this.orderForm.reset();
     } else {
-      this.contactForm.markAllAsTouched();
+      alert('Por favor completa todos los campos requeridos correctamente.');
     }
   }
 }

@@ -1,95 +1,177 @@
-<section id="Blog" class="relative py-20 bg-gradient-to-b from-white to-gray-50 overflow-hidden">
-  <!-- Fondo decorativo -->
-  <div class="absolute inset-0 z-0 opacity-10">
-    <div class="absolute top-0 left-0 w-64 h-64 -ml-32 -mt-32 bg-[#ba1b1b] rounded-full blur-3xl opacity-5"></div>
-    <div class="absolute bottom-0 right-0 w-96 h-96 -mr-48 -mb-48 bg-[#ba1b1b] rounded-full blur-3xl opacity-5"></div>
+<section id="Blog" class="relative py-16 md:py-24 bg-white overflow-hidden">
+  <!-- Fondo decorativo moderno -->
+  <div class="absolute inset-0 z-0">
+    <!-- Patrón geométrico dinámico -->
+    <div class="absolute inset-0 opacity-5">
+      <div class="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgdmlld0JveD0iMCAwIDYwIDYwIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNiYTFiMWIiIGZpbGwtb3BhY2l0eT0iMC4wMyI+PHBhdGggZD0iTTM2IDM0aDEydjEySDM2VjM0em0tMjQgMjRoMTJ2MTJIMTJWMjR6bTAtMjRoMTJ2MTJIMTJWMHptMjQgMGgxMnYxMkgzNlYweiIvPjwvZz48L2c+PC9zdmc+')]"></div>
+    </div>
+    
+    <!-- Efectos de partículas animadas -->
+    <div class="absolute top-1/4 left-1/4 w-32 h-32 rounded-full bg-[#ba1b1b] opacity-5 blur-xl animate-float1"></div>
+    <div class="absolute top-3/4 right-1/4 w-40 h-40 rounded-full bg-[#d11d27] opacity-5 blur-xl animate-float2"></div>
+    <div class="absolute bottom-1/3 left-1/3 w-24 h-24 rounded-full bg-[#ba1b1b] opacity-5 blur-xl animate-float3"></div>
   </div>
-  
+
   <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <!-- Encabezado -->
-    <div class="text-center mb-16">
-      <span class="inline-block px-4 py-2 bg-[#ba1b1b] bg-opacity-10 text-[#ba1b1b] rounded-full text-sm font-medium mb-4">
-        Conocimiento
-      </span>
-      <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-        <span class="block">Blog &</span>
-        <span class="block text-transparent bg-clip-text bg-gradient-to-r from-[#ba1b1b] to-[#d11d27]">Contenido</span>
+    <!-- Encabezado con estilo editorial moderno -->
+    <div class="text-center mb-12 md:mb-20">
+      <div class="inline-flex items-center mb-6">
+        <span class="block w-8 h-0.5 bg-[#ba1b1b] mr-3"></span>
+        <span class="text-sm font-medium tracking-wider text-[#ba1b1b]">CONOCIMIENTO</span>
+        <span class="block w-8 h-0.5 bg-[#ba1b1b] ml-3"></span>
+      </div>
+      <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 leading-tight">
+        <span class="block">Ideas que</span>
+        <span class="block text-transparent bg-clip-text bg-gradient-to-r from-[#ba1b1b] to-[#d11d27] animate-text-gradient">Inspiran</span>
       </h2>
-      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-        Artículos valiosos para ayudarte a mejorar tu estrategia de marca y diseño.
+      <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
+        Exploraciones profundas y perspectivas frescas para transformar tu marca.
       </p>
     </div>
 
-    <!-- Post destacado -->
-    <div class="mb-16 group">
-      <div class="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500">
-        <div class="relative h-96 bg-gray-100 overflow-hidden">
+    <!-- Post destacado - Estilo revista -->
+    <div class="mb-16 group relative">
+      <div class="relative overflow-hidden rounded-3xl shadow-2xl hover:shadow-3xl transition-all duration-700">
+        <div class="relative h-[500px] md:h-[600px] bg-gray-100 overflow-hidden">
+          <!-- Efecto de superposición de color -->
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent z-10"></div>
+          <div class="absolute inset-0 bg-[#ba1b1b] mix-blend-overlay opacity-10 z-0"></div>
+          
           <img [src]="featuredPost.imageUrl" 
                [alt]="featuredPost.title" 
-               class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+               class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
                loading="lazy">
-          <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
-          <div class="absolute bottom-0 left-0 p-8 text-white">
-            <span class="inline-block px-3 py-1 bg-[#ba1b1b] text-white rounded-full text-xs font-medium mb-3">
-              {{featuredPost.category}}
-            </span>
-            <h3 class="text-2xl md:text-3xl font-bold mb-3">{{featuredPost.title}}</h3>
-            <p class="text-gray-200 mb-4">{{featuredPost.excerpt}}</p>
-            <div class="flex items-center text-sm text-gray-300">
-              <span class="mr-4">{{featuredPost.date}}</span>
-              <span class="mr-4">•</span>
-              <span class="mr-4">{{featuredPost.readTime}} lectura</span>
-              <span>Por {{featuredPost.author}}</span>
+          
+          <!-- Contenido flotante -->
+          <div class="absolute bottom-0 left-0 p-8 md:p-12 text-white z-20 w-full max-w-3xl">
+            <div class="inline-flex items-center mb-4">
+              <span class="inline-block px-4 py-1 bg-white text-[#ba1b1b] rounded-full text-xs font-bold tracking-wider mr-3">
+                {{featuredPost.category}}
+              </span>
+              <span class="text-sm text-gray-300">{{featuredPost.date}}</span>
+            </div>
+            
+            <h3 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight">
+              {{featuredPost.title}}
+            </h3>
+            
+            <p class="text-lg text-gray-300 mb-6">{{featuredPost.excerpt}}</p>
+            
+            <div class="flex flex-wrap items-center gap-4">
+              <div class="flex items-center">
+                <div class="w-8 h-8 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center mr-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <span class="text-sm text-gray-300">{{featuredPost.readTime}} lectura</span>
+              </div>
+              
+              <div class="flex items-center">
+                <div class="w-8 h-8 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center mr-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                  </svg>
+                </div>
+                <span class="text-sm text-gray-300">Por {{featuredPost.author}}</span>
+              </div>
             </div>
           </div>
         </div>
       </div>
+      
+      <!-- Efecto de esquina decorativa -->
+      <div class="absolute -top-6 -right-6 w-24 h-24 border-t-2 border-r-2 border-[#ba1b1b] opacity-30 rounded-tr-3xl z-0"></div>
     </div>
 
-    <!-- Grid de artículos -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      <div *ngFor="let post of blogPosts.slice(1)" class="group">
-        <div class="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 h-full flex flex-col">
-          <!-- Imagen -->
-          <div class="relative h-48 bg-gray-100 overflow-hidden">
+    <!-- Grid de artículos - Estilo mosaico moderno -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+      <div *ngFor="let post of blogPosts.slice(1)" class="group relative">
+        <!-- Efecto de tarjeta flotante -->
+        <div class="relative h-full rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
+          <!-- Superposición de imagen -->
+          <div class="relative h-60 bg-gray-100 overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-b from-black/10 to-black/30 z-10 transition-opacity duration-500 group-hover:opacity-0"></div>
+            <div class="absolute inset-0 bg-[#ba1b1b] mix-blend-overlay opacity-0 group-hover:opacity-10 transition-opacity duration-500"></div>
+            
             <img [src]="post.imageUrl" 
                  [alt]="post.title" 
-                 class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                 class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                  loading="lazy">
-            <div class="absolute top-4 right-4">
-              <span class="inline-block px-3 py-1 bg-white text-[#ba1b1b] rounded-full text-xs font-medium">
+                 
+            <!-- Badge de categoría con efecto -->
+            <div class="absolute top-4 right-4 transform translate-x-2 opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-500">
+              <span class="inline-block px-3 py-1 bg-white text-[#ba1b1b] rounded-full text-xs font-bold tracking-wider shadow-sm">
                 {{post.category}}
               </span>
             </div>
           </div>
           
-          <!-- Contenido -->
-          <div class="p-6 flex-grow flex flex-col">
-            <div class="flex items-center text-sm text-gray-500 mb-3">
+          <!-- Contenido con efecto de aparición -->
+          <div class="p-6 bg-white relative z-10">
+            <div class="flex items-center text-xs text-gray-500 mb-3 space-x-2">
               <span>{{post.date}}</span>
-              <span class="mx-2">•</span>
+              <span class="w-1 h-1 bg-gray-400 rounded-full"></span>
               <span>{{post.readTime}} lectura</span>
             </div>
-            <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-[#ba1b1b] transition-colors duration-300">
-              {{post.title}}
+            
+            <h3 class="text-xl font-bold text-gray-900 mb-3 leading-snug">
+              <span class="bg-gradient-to-r from-[#ba1b1b] to-[#ba1b1b] bg-[length:0%_2px] bg-left-bottom bg-no-repeat transition-all duration-500 group-hover:bg-[length:100%_2px]">
+                {{post.title}}
+              </span>
             </h3>
-            <p class="text-gray-600 mb-4 flex-grow">{{post.excerpt}}</p>
-            <div class="flex items-center justify-between">
-              <span class="text-sm text-gray-500">Por {{post.author}}</span>
-              <button class="text-[#ba1b1b] font-medium hover:underline transition-all duration-300">
-                Leer más →
+            
+            <p class="text-gray-600 mb-4 line-clamp-2">{{post.excerpt}}</p>
+            
+            <div class="flex items-center justify-between pt-3 border-t border-gray-100">
+              <div class="flex items-center">
+                <div class="w-6 h-6 rounded-full bg-gray-200 mr-2 overflow-hidden">
+                  <!-- Aquí iría la imagen del autor si estuviera disponible -->
+                </div>
+                <span class="text-xs text-gray-500">Por {{post.author}}</span>
+              </div>
+              
+              <button class="text-[#ba1b1b] font-medium text-sm flex items-center group">
+                <span class="mr-1">Leer</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
               </button>
             </div>
           </div>
+          
+          <!-- Efecto de borde hover -->
+          <div class="absolute inset-0 border-2 border-transparent group-hover:border-[#ba1b1b] rounded-2xl opacity-20 transition-all duration-500 pointer-events-none"></div>
         </div>
+        
+        <!-- Elemento decorativo flotante -->
+        <div class="absolute -z-10 top-4 left-4 w-full h-full rounded-2xl bg-gray-100 group-hover:bg-[#ba1b1b] opacity-0 group-hover:opacity-5 transition-all duration-500"></div>
       </div>
     </div>
 
-    <!-- Botón para ver más -->
-    <div class="text-center mt-12">
-      <button class="px-8 py-3 bg-[#ba1b1b] text-white font-medium rounded-lg hover:bg-[#d11d27] transition-all duration-300">
-        Ver todos los artículos
+    <!-- Botón para ver más - Estilo editorial -->
+    <div class="text-center mt-16">
+      <button class="relative inline-flex items-center px-8 py-3 bg-white text-[#ba1b1b] font-medium rounded-full border-2 border-[#ba1b1b] overflow-hidden group">
+        <span class="absolute inset-0 bg-gradient-to-r from-[#ba1b1b] to-[#d11d27] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+        <span class="relative z-10 flex items-center">
+          <span class="mr-2">Explorar más artículos</span>
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+          </svg>
+        </span>
       </button>
     </div>
+  </div>
+  
+  <!-- Ola decorativa inferior moderna -->
+  <div class="absolute bottom-0 left-0 right-0 overflow-hidden z-0 transform rotate-180">
+    <svg viewBox="0 0 1200 120" preserveAspectRatio="none" class="w-full h-16 md:h-24">
+      <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" 
+            opacity=".1" 
+            fill="#ba1b1b"></path>
+      <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" 
+            opacity=".2" 
+            fill="#ba1b1b"></path>
+    </svg>
   </div>
 </section>
